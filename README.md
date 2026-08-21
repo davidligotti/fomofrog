@@ -4,7 +4,20 @@
 **Symbol:** FOMO  
 **Chain:** Solana mainnet-beta (chainId 101)  
 **Decimals:** 6  
-**Mint:** H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump
+**Mint:** `H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump`
+
+## MASTER control
+
+Every FomoFrog token, metadata, website, community, treasury, listing, analytics, growth, security, and infrastructure task is managed through **MASTER — Mac & Business Continued in Codex**.
+
+- Canonical executive feed: `davidligotti/dealflows-lead-gen` issue **#115**
+- Crypto specification and safety program: issue **#120**
+- Machine Work ID/lease authority: Autonomy Runner
+- Primary source/code executor: pinned Mac Codex conversation **“MASTER — Mac & Business Continued”**
+- Consequential-action policy: Dealflow Security
+- Mandatory repository policy: [`AGENTS.md`](AGENTS.md)
+
+This repository is a metadata/assets surface, not a treasury controller, wallet, exchange, proof of listing, investment claim, or authority to move tokens. No real-money or on-chain effect occurs without the exact protected MASTER owner/multisig/hardware-wallet gate and independent verification.
 
 ## Official Links
 - Website: https://fomofrog.com
@@ -12,10 +25,11 @@
 - Telegram: https://t.me/TheFomoFrog
 
 ## About
-FomoFrog ($FOMO) is a viral Solana-based meme coin and ecosystem.  
-This repository provides canonical metadata and assets for listings on wallets (Phantom, Solflare) and DEXes (Jupiter, Raydium).
+FomoFrog ($FOMO) is a Solana-based meme coin and ecosystem. This repository provides the project’s declared metadata and assets for compatible wallets and listing providers. Every provider, listing, liquidity, holder, market, audit, ownership, or performance claim still requires current independent evidence; a repository entry alone is not proof.
 
-## Repo Contents
-- `token.json` → official Solana token metadata
-- `logo.png` → 512×512 token logo
-- `LICENSE` → open-source license
+## Repository contents
+- `token.json` — declared Solana token metadata
+- `logo.png` — token logo asset
+- `LICENSE` — repository license
+
+Before any change, MASTER must verify the exact chain, mint, decimals, metadata URI/authority, source revision, Work ID, lease, rollback, verifier, Closer, and provider-specific acceptance contract.
