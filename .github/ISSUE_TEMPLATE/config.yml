@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: MASTER / FomoFrog canonical control feed
+    url: https://github.com/davidligotti/dealflows-lead-gen/issues/115
+    about: Route every token, metadata, community, listing, security, treasury, infrastructure, and owner-gated event through the canonical MASTER Work ID feed.
