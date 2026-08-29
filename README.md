@@ -32,5 +32,7 @@ FomoFrog ($FOMO) is a Solana-based meme coin and ecosystem. This repository prov
 - `fomofrog_logo_512.png` — token logo asset
 - `LICENSE` — repository license
 - [`LISTING-STATUS.md`](LISTING-STATUS.md) — dated, factual platform-discovery status and submission path
+- [`TRANSPARENCY.md`](TRANSPARENCY.md) — token facts, market-data policy, and project boundaries
+- [`SECURITY.md`](SECURITY.md) — security and privacy disclosure policy
 
 Before any change, MASTER must verify the exact chain, mint, decimals, metadata URI/authority, source revision, Work ID, lease, rollback, verifier, Closer, and provider-specific acceptance contract.
