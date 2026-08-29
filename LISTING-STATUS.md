@@ -1,6 +1,6 @@
 # FomoFrog listing and metadata status
 
-Last checked: 2026-08-29 UTC  
+Last checked: 2026-08-29 21:20 UTC  
 Canonical mint: `H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump`
 
 This document records observed platform state. It is not a claim that any platform has approved, endorsed, or guaranteed FomoFrog.
@@ -9,7 +9,7 @@ This document records observed platform state. It is not a claim that any platfo
 
 | Surface | Current observation |
 |---|---|
-| Jupiter Tokens API | Returns FomoFrog metadata and market fields for the canonical mint. |
+| Jupiter Tokens API | Returns FomoFrog metadata and market fields, but the live quote endpoint returns `TOKEN_NOT_TRADABLE` for both buy and sell checks. |
 | GeckoTerminal | Returns a FOMO/SOL Pump.fun-origin pool; current liquidity/activity must be checked live. |
 | DexScreener token API | Returned no pair at the last check. |
 | Raydium mint lookup | Returned no Raydium pool at the last check. |
