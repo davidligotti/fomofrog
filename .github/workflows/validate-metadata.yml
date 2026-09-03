@@ -69,5 +69,18 @@ jobs:
             const text = fs.readFileSync(file, 'utf8');
             if (!text.includes(canonical)) throw new Error('canonical mint missing from ' + file);
           }
-          console.log('canonical metadata, evidence documents, and secret scan validated');
+
+          const publicFiles = ['README.md', 'token.json'];
+          const publicBlockers = [
+            /119Pla-aVMMBDs9e8bMutNk9dLYSG1bKLokb3M-AZ-Co/i,
+            /(?:guaranteed|100x|moon|giveaway|rewards|audited|liquidity locked|institutional[- ]grade|A\+ grade security|no hidden functions|backdoors)/i
+          ];
+          for (const file of publicFiles) {
+            const text = fs.readFileSync(file, 'utf8');
+            for (const pattern of publicBlockers) {
+              if (pattern.test(text)) throw new Error('unsupported or private public-surface content in ' + file + ': ' + pattern);
+            }
+          }
+
+          console.log('canonical metadata, evidence documents, public-surface guard, and secret scan validated');
           NODE
