@@ -1,5 +1,7 @@
 # Security policy
 
+Last reviewed: 2026-09-03
+
 ## Scope
 
 This repository contains token identity metadata, project links, documentation, and an image asset. It does not contain wallet private keys, signing code, custody logic, or a trading execution service.
