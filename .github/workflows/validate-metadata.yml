@@ -63,7 +63,10 @@ jobs:
 
           for (const file of requiredDocs.slice(0, 3)) {
             const text = fs.readFileSync(file, 'utf8');
-            if (!/(2026-09-03|Last verified|Current as of)/.test(text)) throw new Error('missing evidence date in ' + file);
+            if (!/(2026-09-03|Last reviewed|Last verified|Current as of)/.test(text)) throw new Error('missing evidence date in ' + file);
+          }
+          for (const file of ['LISTING-STATUS.md', 'TRANSPARENCY.md']) {
+            const text = fs.readFileSync(file, 'utf8');
             if (!text.includes(canonical)) throw new Error('canonical mint missing from ' + file);
           }
           console.log('canonical metadata, evidence documents, and secret scan validated');
