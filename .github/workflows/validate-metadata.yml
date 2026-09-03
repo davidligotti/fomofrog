@@ -27,7 +27,7 @@ jobs:
 
           const canonical = 'H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump';
           const token = JSON.parse(fs.readFileSync('token.json', 'utf8'));
-          const requiredDocs = ['LISTING-STATUS.md', 'TRANSPARENCY.md', 'SECURITY.md', 'AGENTS.md', 'CHANNEL-STATUS.md'];
+          const requiredDocs = ['LISTING-STATUS.md', 'TRANSPARENCY.md', 'SECURITY.md', 'AGENTS.md', 'CHANNEL-STATUS.md', 'PLATFORM-LISTING-MATRIX.md'];
           const requiredLinks = { website: 'https://fomofrog.com' };
 
           if (token.chainId !== 101) throw new Error('chainId must be Solana mainnet (101)');
