@@ -49,5 +49,6 @@ FomoFrog ($FOMO) is a Solana-based meme coin and ecosystem. This repository prov
 - [`CHANNEL-STATUS.md`](CHANNEL-STATUS.md) — channel identity and ownership verification status
 - [`PROVENANCE.md`](PROVENANCE.md) — repository/deployment evidence boundary
 - [`CHANGELOG.md`](CHANGELOG.md) — factual repository change history
+- [`TRUTHFUL-PUBLIC-COPY.md`](TRUTHFUL-PUBLIC-COPY.md) — proposed replacement copy for the website
 
 Before any change, MASTER must verify the exact chain, mint, decimals, metadata URI/authority, source revision, Work ID, lease, rollback, verifier, Closer, and provider-specific acceptance contract.
