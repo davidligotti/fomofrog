@@ -18,15 +18,16 @@ This document records observed platform state. It is not a claim that any platfo
 
 A DEX or aggregator display is not proof of liquidity, safety, legitimacy, or future performance. Provider responses can disagree or be stale; the 2026-09-03 Jupiter quote check explicitly returned TOKEN_NOT_TRADABLE. Verify the mint address and an executable quote before every transaction.
 
-## Canonical project links
+## Verified project references
 
 - Website: https://fomofrog.com
-- X: https://x.com/FomoFrogCoin
-- Telegram: https://t.me/TheFomoFrog
+- Channel identity status: [CHANNEL-STATUS.md](CHANNEL-STATUS.md)
 - Logo: https://raw.githubusercontent.com/davidligotti/fomofrog/main/fomofrog_logo_512.png
 - Solscan: https://solscan.io/token/H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump
 - Pump.fun: https://pump.fun/coin/H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump
 - DexScreener lookup: https://dexscreener.com/solana/H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump
+
+X, Telegram, and Discord are not listed here as independently verified official channels; their current evidence and conflicts are tracked in CHANNEL-STATUS.md.
 
 ## Legitimate path to broader availability
 
