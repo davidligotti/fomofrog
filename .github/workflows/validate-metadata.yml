@@ -1,0 +1,68 @@
+name: Validate FomoFrog metadata
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate canonical token metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs');
+          const token = JSON.parse(fs.readFileSync('token.json', 'utf8'));
+          const canonical = 'H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump';
+          const requiredDocs = ['LISTING-STATUS.md', 'TRANSPARENCY.md', 'SECURITY.md', 'AGENTS.md'];
+          const requiredLinks = {
+            website: 'https://fomofrog.com',
+            twitter: 'https://x.com/FomoFrogCoin',
+            telegram: 'https://t.me/TheFomoFrog'
+          };
+          if (token.chainId !== 101) throw new Error('chainId must be Solana mainnet (101)');
+          if (token.address !== canonical) throw new Error('token address is not the canonical FomoFrog mint');
+          if (token.symbol !== 'FOMO' || token.name !== 'FomoFrog') throw new Error('token name or symbol mismatch');
+          if (token.decimals !== 6) throw new Error('decimals mismatch');
+          if (token.logoURI !== 'https://raw.githubusercontent.com/davidligotti/fomofrog/main/fomofrog_logo_512.png') {
+            throw new Error('logoURI must use the verified repository asset');
+          }
+          for (const [key, value] of Object.entries(requiredLinks)) {
+            if (!token.extensions || token.extensions[key] !== value) {
+              throw new Error('official link mismatch: ' + key);
+            }
+          }
+          for (const file of requiredDocs) {
+            if (!fs.existsSync(file)) throw new Error('required evidence document missing: ' + file);
+          }
+          console.log('canonical metadata and required evidence documents validated');
+          NODE
+
+      - name: Check repository for accidental secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if rg -n --hidden --glob '!.git/**' --glob '!*.png' --glob '!*.jpg' --glob '!*.jpeg'             '(BEGIN (RSA|EC|OPENSSH|PGP) PRIVATE KEY|AKIA[0-9A-Z]{16}|xox[baprs]-|ghp_[A-Za-z0-9]{30,})' .; then
+            echo 'Potential secret material found in tracked repository content'
+            exit 1
+          fi
+
+      - name: Check required public evidence fields
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in LISTING-STATUS.md TRANSPARENCY.md SECURITY.md; do
+            rg -q '2026-09-03|Last verified|Current as of' "$file"
+            rg -q 'H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump' "$file"
+          done
