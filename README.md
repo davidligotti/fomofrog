@@ -19,20 +19,27 @@ Every FomoFrog token, metadata, website, community, treasury, listing, analytics
 
 This repository is a metadata/assets surface, not a treasury controller, wallet, exchange, proof of listing, investment claim, or authority to move tokens. No real-money or on-chain effect occurs without the exact protected MASTER owner/multisig/hardware-wallet gate and independent verification.
 
-## Official Links
-- Website: https://fomofrog.com
-- Twitter/X: https://x.com/FomoFrogCoin
-- Telegram: https://t.me/TheFomoFrog
+## Official links
+
+- Verified website: https://fomofrog.com
+- Channel status and verification requirements: [`CHANNEL-STATUS.md`](CHANNEL-STATUS.md)
+
+X, Telegram, and Discord identities remain unresolved or only website-linked; they are not presented here as independently verified official accounts.
 
 ## About
+
 FomoFrog ($FOMO) is a Solana-based meme coin and ecosystem. This repository provides the project’s declared metadata and assets for compatible wallets and listing providers. Every provider, listing, liquidity, holder, market, audit, ownership, or performance claim still requires current independent evidence; a repository entry alone is not proof.
 
 ## Repository contents
+
 - `token.json` — declared Solana token metadata
 - `fomofrog_logo_512.png` — token logo asset
 - `LICENSE` — repository license
 - [`LISTING-STATUS.md`](LISTING-STATUS.md) — dated, factual platform-discovery status and submission path
 - [`TRANSPARENCY.md`](TRANSPARENCY.md) — token facts, market-data policy, and project boundaries
 - [`SECURITY.md`](SECURITY.md) — security and privacy disclosure policy
+- [`CHANNEL-STATUS.md`](CHANNEL-STATUS.md) — channel identity and ownership verification status
+- [`PROVENANCE.md`](PROVENANCE.md) — repository/deployment evidence boundary
+- [`CHANGELOG.md`](CHANGELOG.md) — factual repository change history
 
 Before any change, MASTER must verify the exact chain, mint, decimals, metadata URI/authority, source revision, Work ID, lease, rollback, verifier, Closer, and provider-specific acceptance contract.
