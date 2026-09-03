@@ -26,6 +26,13 @@ This repository is a metadata/assets surface, not a treasury controller, wallet,
 
 X, Telegram, and Discord identities remain unresolved or only website-linked; they are not presented here as independently verified official accounts.
 
+## Current platform state
+
+- [`PLATFORM-LISTING-MATRIX.md`](PLATFORM-LISTING-MATRIX.md) — separate evidence-based states for discovery, indexing, tradability, submission, approval, and liquidity.
+- [`LISTING-STATUS.md`](LISTING-STATUS.md) — dated provider observations.
+- At last verification, Jupiter metadata existed but buy and sell quotes returned `TOKEN_NOT_TRADABLE`; no DexScreener pair or verified Raydium pool was established.
+- The website deployment requires remediation and independent route verification before it can be called production-ready.
+
 ## About
 
 FomoFrog ($FOMO) is a Solana-based meme coin and ecosystem. This repository provides the project’s declared metadata and assets for compatible wallets and listing providers. Every provider, listing, liquidity, holder, market, audit, ownership, or performance claim still requires current independent evidence; a repository entry alone is not proof.
@@ -36,6 +43,7 @@ FomoFrog ($FOMO) is a Solana-based meme coin and ecosystem. This repository prov
 - `fomofrog_logo_512.png` — token logo asset
 - `LICENSE` — repository license
 - [`LISTING-STATUS.md`](LISTING-STATUS.md) — dated, factual platform-discovery status and submission path
+- [`PLATFORM-LISTING-MATRIX.md`](PLATFORM-LISTING-MATRIX.md) — auditable platform-state matrix
 - [`TRANSPARENCY.md`](TRANSPARENCY.md) — token facts, market-data policy, and project boundaries
 - [`SECURITY.md`](SECURITY.md) — security and privacy disclosure policy
 - [`CHANNEL-STATUS.md`](CHANNEL-STATUS.md) — channel identity and ownership verification status
