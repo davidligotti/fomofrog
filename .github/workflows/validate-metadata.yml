@@ -26,7 +26,9 @@ jobs:
           const token = JSON.parse(fs.readFileSync('token.json', 'utf8'));
           const canonical = 'H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump';
           const requiredDocs = ['LISTING-STATUS.md', 'TRANSPARENCY.md', 'SECURITY.md', 'AGENTS.md'];
-          const requiredLinks = {\n            website: 'https://fomofrog.com'\n          };
+          const requiredLinks = {
+            website: 'https://fomofrog.com'
+          };
           if (token.chainId !== 101) throw new Error('chainId must be Solana mainnet (101)');
           if (token.address !== canonical) throw new Error('token address is not the canonical FomoFrog mint');
           if (token.symbol !== 'FOMO' || token.name !== 'FomoFrog') throw new Error('token name or symbol mismatch');
