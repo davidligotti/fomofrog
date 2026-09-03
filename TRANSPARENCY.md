@@ -1,6 +1,6 @@
 # FomoFrog transparency
 
-Last reviewed: 2026-08-29
+Last reviewed: 2026-09-03
 Canonical mint: H7N8GMFegfmFvV2Vrqkm7DpAoK1CBj6KdvwBkSdQpump
 
 ## Scope
